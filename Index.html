@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Programa para Receber e Somar Dígitos do RA</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function processarRA() {
+            // Obter o valor do RA digitado pelo usuário
+            var ra = document.getElementById("inputRA").value;
+
+            // Verificar se o RA é um número inteiro de 8 dígitos
+            if (!(/^\d{8}$/.test(ra))) {
+                alert("Por favor, insira um número inteiro de 8 dígitos para o RA.");
+                return;
+            }
+
+            // Extrair cada dígito do RA e armazená-los em variáveis separadas
+            var digito1 = parseInt(ra[0]);
+            var digito2 = parseInt(ra[1]);
+            var digito3 = parseInt(ra[2]);
+            var digito4 = parseInt(ra[3]);
+            var digito5 = parseInt(ra[4]);
+            var digito6 = parseInt(ra[5]);
+            var digito7 = parseInt(ra[6]);
+            var digito8 = parseInt(ra[7]);
+
+            // Calcular a soma dos dígitos
+            var soma = digito1 + digito2 + digito3 + digito4 + digito5 + digito6 + digito7 + digito8;
+
+            // Exibir os dígitos e a soma na página HTML
+            var resultado = `Dígitos do RA: ${digito1}, ${digito2}, ${digito3}, ${digito4}, ${digito5}, ${digito6}, ${digito7}, ${digito8}<br>`;
+            resultado += `Soma dos dígitos: ${soma}`;
+
+            document.getElementById("output").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator-box">
+        <h1>Receber e Somar Dígitos do RA</h1>
+        <p>Insira o RA (número inteiro de 8 dígitos):</p>
+        <input type="text" id="inputRA" maxlength="8">
+        <button onclick="processarRA()">Processar RA</button>
+        <div id="output"></div>
+    </div>
+</body>
+</html>
