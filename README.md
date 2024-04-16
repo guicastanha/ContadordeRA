@@ -18,4 +18,4 @@ Este projeto não requer instalações especiais e pode ser executado em qualque
 
 1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/guicastanha/ContadordeRA.git
